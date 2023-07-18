@@ -82,7 +82,7 @@ h3 {
 
 img {
     width: 100%;
-    max-height: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -135,9 +135,16 @@ footer {
         padding: 10px;
     }
 
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
     .filter-nav button {
-        font-size: 14px;
-        padding: 8px 16px;
+        font-size: 0.8rem;
         margin-bottom: 10px;
     }
 
@@ -150,7 +157,7 @@ footer {
     }
 
     .beverage-card h3 {
-        font-size: 20px;
+        font-size: 0.8rem;
         margin-bottom: 8px;
     }
 
