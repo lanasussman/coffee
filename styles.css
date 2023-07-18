@@ -1,0 +1,178 @@
+body {
+    background-color: #eee6db;
+    color: #2d1d0e;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #362f2d;
+    padding: 20px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    margin: 0;
+    color: #fff;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+main {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #7b5b3a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #362f2d;
+}
+
+.filter-nav button:hover {
+    background-color: #996969;
+}
+
+.filter-nav .active:hover {
+    background-color: #362f2d;
+    color: white;
+    border-color: #895d5d;
+    cursor: default;
+}
+
+.beverages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.beverage-card {
+    background-color: #f6eee4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #7b5b3a;
+}
+
+img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: transform;
+}
+
+.beverage-card img:hover {
+    transform: scale(1.1);
+}
+
+p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background-color: #7b5b3a;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.primary-btn:hover {
+    background-color: #362f2d;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer p {
+    color:#362f2d;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    main {
+        padding: 10px;
+    }
+
+    .filter-nav button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-bottom: 10px;
+    }
+
+    .beverages {
+        grid-template-columns: 1fr;
+    }
+
+    .beverage-card {
+        padding: 10px;
+    }
+
+    .beverage-card h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .beverage-card img {
+        margin-bottom: 8px;
+    }
+
+    .beverage-card .primary-btn {
+        padding: 8px 16px;
+        margin-top: 8px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    main {
+        padding: 15px;
+    }
+
+    .filter-nav button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-right: 15px;
+    }
+}
