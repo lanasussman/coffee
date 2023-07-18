@@ -83,61 +83,9 @@ function createBeverageCard(beverage) {
     learnMoreBtn.textContent = "Learn more...";
     learnMoreBtn.classList.add("primary-btn");
 
-    learnMoreBtn.addEventListener("click", function () {
-        fetchAndDisplayBeverage(beverage.id, beverage.description);
-    });
-
     card.appendChild(learnMoreBtn);
 
     return card;
-}
-
-
-function getAPIEndpoint(id, description) {
-    const hotAPIEndpoint = `https://api.sampleapis.com/coffee/hot/${id}`;
-    const coldAPIEndpoint = `https://api.sampleapis.com/coffee/iced/${id}`;
-
-    if (description.includes("ice") || description.includes("cold")) {
-        return coldAPIEndpoint;
-    } else {
-        return hotAPIEndpoint;
-    }
-}
-
-async function fetchAndDisplayBeverage(id, description) {
-    const endpoint = getAPIEndpoint(id, description);
-
-    try {
-        const response = await fetch(endpoint);
-        const beverage = await response.json();
-
-        const card = document.createElement("div");
-        card.classList.add("beverage-card");
-        card.id = beverage.id;
-
-        const title = document.createElement("h3");
-        title.textContent = beverage.title;
-        card.appendChild(title);
-
-        const image = document.createElement("img");
-        image.src = beverage.image;
-        image.alt = beverage.title;
-        card.appendChild(image);
-
-        const ingredients = document.createElement("p");
-        ingredients.textContent = "Ingredients: " + beverage.ingredients.join(", ");
-        card.appendChild(ingredients);
-
-        const description = document.createElement("p");
-        description.textContent = beverage.description;
-        card.appendChild(description);
-
-        return card;
-
-
-    } catch (error) {
-        console.log("Error fetching beverage details:", error);
-    }
 }
 
 filterBeverages("allBeverages");
