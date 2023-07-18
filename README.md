@@ -1,3 +1,3 @@
 # Coffee
 HTML, CSS and JavaScript simple web app.
-Please follow the link: https://lanasussman.github.io/coffeewebsite/
+Please follow the link: https://lanasussman.github.io/coffee/
